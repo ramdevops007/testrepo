@@ -203,7 +203,7 @@
    </executions>
    <configuration>
       <serverId>nexus</serverId>
-      <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+      <nexusUrl>http://192.168.56.107:8081/nexus/</nexusUrl>
       <skipStaging>true</skipStaging>
    </configuration>
 </plugin>
@@ -211,19 +211,8 @@
   </build>
 <distributionManagement>
    <repository>
-      <id>nexus-releases</id>
-      <url>http://localhost:8081/nexus/content/repositories/releases</url>
-   </repository>
-   <snapshotRepository>
       <id>nexus</id>
-      <url>http://192.168.99.101:8081/nexus/content/repositories/snapshots/</url>
-   </snapshotRepository>
+      <url>http://192.168.56.107:8081/nexus/content/repositories/snapshots/</url>
+   </repository>
 </distributionManagement>
-<scm>
- <connection>scm:git:https://github.com/kanthibushan/maventest.git</connection>
- <url>https://github.com/kanthibushan/maventest</url>
-<developerConnection>scm:git:https://github.com/kanthibushan/maventest.git</developerConnection>
-  <tag>2.0</tag>
-  </scm>
-
 </project>
